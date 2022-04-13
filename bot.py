@@ -22,7 +22,7 @@ async def callback(bot, msg: CallbackQuery):
     if msg.data == "close":
       await msg.message.delete()       
                                
-@ajvad.on_message(filters.regex("ayan") & filters.group)
+@ajvad.on_message(filters.regex("movie1") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/0797dc53ae22aae6d4fc9.jpg",
