@@ -12,7 +12,7 @@ ajvad = Client(
 )
 
 movie1_down_1 = [[                                                 
-                  InlineKeyboardButton("🄳🄾🅆🄽🄻🄾🄰🄳", url="https://t.me/c/1314197326/2")
+                  InlineKeyboardButton("🄳🄾🅆🄽🄻🄾🄰🄳", url="https://t.me/Autofilterv50_bot?start=Z2V0LTk0MTU3NjEyMDczMDE0LTk5MTY1OTk1NjkzOTE5")
                   ],[
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
@@ -22,7 +22,7 @@ async def callback(bot, msg: CallbackQuery):
     if msg.data == "close":
       await msg.message.delete()       
                                
-@ajvad.on_message(filters.regex("movie1") & filters.group)
+@ajvad.on_message(filters.regex("ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/0797dc53ae22aae6d4fc9.jpg",
