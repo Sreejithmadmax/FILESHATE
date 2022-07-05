@@ -36,7 +36,7 @@ async def callback(bot, msg: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await msg.message.edit_text(
-            text="hai",
+            text="☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
             reply_markup=reply_markup
         )
         await msg.answer('Piracy Is Crime')
@@ -48,7 +48,7 @@ async def callback(bot, msg: CallbackQuery):
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_1)
         await msg.message.edit_text(
-            text="hai",
+            text="☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
             reply_markup=reply_markup
         )
                                 
