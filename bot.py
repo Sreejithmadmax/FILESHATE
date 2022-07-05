@@ -53,7 +53,7 @@ def start(bot, message):
    text ="കുട്ടാപ്സ് ⚡️",
    reply_markup = InlineKeyboardMarkup(movie1_down_1)
    message.replay(
-        text="പോടാ മോനെ ദിനേശാ 😂,
+        text="പോടാ മോനെ ദിനേശാ 😂",
         reply_markup=reply_markup
 )
                                 
