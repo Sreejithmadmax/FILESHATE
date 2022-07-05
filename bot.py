@@ -39,7 +39,6 @@ async def callback(bot, msg: CallbackQuery):
             text="☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
             reply_markup=reply_markup
         )
-        await msg.answer('Piracy Is Crime')
     elif msg.data == "help":
         movie1_down_1 = [[                                                 
                   InlineKeyboardButton("Season 1", callback_data="start")
