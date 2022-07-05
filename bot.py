@@ -42,7 +42,7 @@ async def callback(bot, msg: CallbackQuery):
         )
     elif msg.data == "kalippan":
         movie1_down_2 = [[                                                 
-                  InlineKeyboardButton("Seasons", callback_data="start")
+                  InlineKeyboardButton("Seasons", callback_data="start"),
                   InlineKeyboardButton("close", callback_data="close")
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_2)
@@ -71,7 +71,7 @@ async def my_handle56814(bot, message):
     )
 
 movie1_down_2 = [[                                                 
-                  InlineKeyboardButton("Seasons", callback_data="start")
+                  InlineKeyboardButton("Seasons", callback_data="start"),
                   InlineKeyboardButton("close", callback_data="close")
                   ]]       
 
