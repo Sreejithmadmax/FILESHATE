@@ -47,7 +47,7 @@ async def callback(bot, msg: CallbackQuery):
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_2)
         await msg.message.edit_text(
-            text="☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
+            text="☞ 𝙼𝙾𝚅𝙸𝙴 : Money Heist\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
             reply_markup=reply_markup
         )
 @sree.on_message(filters.command('start') & filters.private)
@@ -62,8 +62,8 @@ def start(bot, message):
 @sree.on_message(filters.regex("Ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
-        photo="https://telegra.ph/file/0797dc53ae22aae6d4fc9.jpg",
-        caption="""☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan
+        photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
+        caption="""☞ 𝙼𝙾𝚅𝙸𝙴 : Money Heist
 ☞ 𝚈𝙴𝙰𝚁 : 2009
 ☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p
 ☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸""",
@@ -78,7 +78,7 @@ movie1_down_2 = [[
 @sree.on_message(filters.regex("ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
-        photo="https://telegra.ph/file/f6f4d7cf4452f2c63dd3d.jpg",
+        photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
         caption="""☞ 𝙼𝙾𝚅𝙸𝙴 :
 ☞ 𝚈𝙴𝙰𝚁 :
 ☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p
