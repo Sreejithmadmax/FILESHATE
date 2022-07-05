@@ -37,8 +37,7 @@ async def callback(bot, msg: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await msg.message.edit_text(
             text="hai",
-            reply_markup=reply_markup,
-            parse_mode='html'
+            reply_markup=reply_markup
         )
         await msg.answer('Piracy Is Crime')
     elif msg.data == "help":
@@ -50,8 +49,7 @@ async def callback(bot, msg: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(movie1_down_1)
         await msg.message.edit_text(
             text="hai",
-            reply_markup=reply_markup,
-            parse_mode='html'
+            reply_markup=reply_markup
         )
                                 
 @sree.on_message(filters.regex("ayan") & filters.group)
