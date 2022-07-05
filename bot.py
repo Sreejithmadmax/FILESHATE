@@ -40,16 +40,22 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=reply_markup
         )
     elif msg.data == "help":
-        movie1_down_1 = [[                                                 
-                  InlineKeyboardButton("Season 1", callback_data="start")
-                  ],[
+        movie1_down_1 = [[                                                          
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_1)
         await msg.message.edit_text(
-            text="☞ 𝙼𝙾𝚅𝙸𝙴 : Ayan\n☞ 𝚈𝙴𝙰𝚁 : 2009\n☞ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p,1080p, 480p\n☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
+            text="കുട്ടാപ്സ്",
             reply_markup=reply_markup
         )
+@sree.on_message(filters.command('start') & filters.private)
+def start(bot, message):
+   text ="കുട്ടാപ്സ് ⚡️",
+   reply_markup = InlineKeyboardMarkup(movie1_down_1)
+   message.replay(
+        text="പോടാ മോനെ ദിനേശാ 😂,
+        reply_markup=reply_markup
+)
                                 
 @sree.on_message(filters.regex("Ayan") & filters.group)
 async def my_handle56814(bot, message):
