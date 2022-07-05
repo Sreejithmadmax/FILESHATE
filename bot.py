@@ -22,7 +22,7 @@ async def callback(bot, msg: CallbackQuery):
     if msg.data == "close":
       await msg.message.delete()    
   
-    elif query.data == "start":
+    elif msg.data == "start":
         buttons = [[
             InlineKeyboardButton('ep 1', url='https://t.me/koiimone')
             ],[
@@ -35,20 +35,20 @@ async def callback(bot, msg: CallbackQuery):
             InlineKeyboardButton('back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
+        await msg.message.edit_text(
             text="hai",
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
-    elif query.data == "help":
+        await msg.answer('Piracy Is Crime')
+    elif msg.data == "help":
         movie1_down_1 = [[                                                 
                   InlineKeyboardButton("Season 1", callback_data="start")
                   ],[
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_1)
-        await query.message.edit_text(
+        await msg.message.edit_text(
             text="hai",
             reply_markup=reply_markup,
             parse_mode='html'
