@@ -12,7 +12,7 @@ sree = Client(
 )
 
 movie1_down_1 = [[                                                 
-                  InlineKeyboardButton("🄳🄾🅆🄽🄻🄾🄰🄳", url="https://t.me/Autofilterv50_bot?start=Z2V0LTk0MTU3NjEyMDczMDE0LTk5MTY1OTk1NjkzOTE5")
+                  InlineKeyboardButton("Season 1", callback_data="start")
                   ],[
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
@@ -20,8 +20,40 @@ movie1_down_1 = [[
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
     if msg.data == "close":
-      await msg.message.delete()       
-                               
+      await msg.message.delete()    
+  
+    elif query.data == "start":
+        buttons = [[
+            InlineKeyboardButton('ep 1', url='https://t.me/koiimone')
+            ],[
+            InlineKeyboardButton('ep2', url='https://t.me/koiimone'),
+            InlineKeyboardButton('ep3', url='https://t.me/koiimone')
+            ],[
+            InlineKeyboardButton('ep5 ', url='https://t.me/koiimone'),
+            InlineKeyboardButton(' ep4', url='https://t.me/koiimone')
+            ],[
+            InlineKeyboardButton('back', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="hai"(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+        await query.answer('Piracy Is Crime')
+    elif query.data == "help":
+        movie1_down_1 = [[                                                 
+                  InlineKeyboardButton("Season 1", callback_data="start")
+                  ],[
+                  InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
+                  ]]
+        reply_markup = InlineKeyboardMarkup(movie1_down_1)
+        await query.message.edit_text(
+            text="hai"(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+                                
 @sree.on_message(filters.regex("ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
@@ -48,5 +80,7 @@ async def my_handle56814(bot, message):
 ☞ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝙷𝙸𝙽𝙳𝙸, 𝙼𝙰𝙻𝙰𝚈𝙰, 𝚃𝙰𝙼𝙸, 𝚃𝙴𝙻""",
         reply_markup=InlineKeyboardMarkup(movie1_down_2)
     )
+
+
 
 sree.run() 
