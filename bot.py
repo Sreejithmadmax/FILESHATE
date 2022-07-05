@@ -51,7 +51,7 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=reply_markup
         )
                                 
-@sree.on_message(filters.regex('ayan', 'Ayan') & filters.group)
+@sree.on_message(filters.regex("Ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/0797dc53ae22aae6d4fc9.jpg",
