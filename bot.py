@@ -11,7 +11,11 @@ sree = Client(
     api_hash = os.environ["API_HASH"],
 )
 
-
+movie1_down_1 = [[                                                 
+                  InlineKeyboardButton("Season 1", callback_data="start")
+                  ],[
+                  InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
+                  ]]
     
     
 @sree.on_callback_query()
