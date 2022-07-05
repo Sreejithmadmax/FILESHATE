@@ -59,7 +59,7 @@ def start(bot, message):
         reply_markup=reply_markup
 )
                                 
-@sree.on_message(filters.regex("Ayan") & filters.group)
+@sree.on_message(filters.regex("Money Heist") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
