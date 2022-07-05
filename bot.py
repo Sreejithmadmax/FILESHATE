@@ -36,7 +36,7 @@ async def callback(bot, msg: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="hai"(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text="hai",
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -49,7 +49,7 @@ async def callback(bot, msg: CallbackQuery):
                   ]]
         reply_markup = InlineKeyboardMarkup(movie1_down_1)
         await query.message.edit_text(
-            text="hai"(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+            text="hai",
             reply_markup=reply_markup,
             parse_mode='html'
         )
