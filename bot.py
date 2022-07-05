@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyb
 from pyrogram.types import CallbackQuery
 import os
 
-ajvad = Client(
+sree = Client(
     "URUVASHI_FILTER",
     bot_token = os.environ["BOT_TOKEN"],
     api_id = int(os.environ["API_ID"]),
@@ -17,12 +17,12 @@ movie1_down_1 = [[
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
      
-@ajvad.on_callback_query()
+@sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
     if msg.data == "close":
       await msg.message.delete()       
                                
-@ajvad.on_message(filters.regex("ayan") & filters.group)
+@sree.on_message(filters.regex("ayan") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/0797dc53ae22aae6d4fc9.jpg",
@@ -38,7 +38,7 @@ movie1_down_2 = [[
                   InlineKeyboardButton("close", callback_data="close")
                   ]]       
 
-@ajvad.on_message(filters.regex("movie2") & filters.group)
+@sree.on_message(filters.regex("movie2") & filters.group)
 async def my_handle56814(bot, message):
     await message.reply_photo( 
         photo="https://telegra.ph/file/f6f4d7cf4452f2c63dd3d.jpg",
