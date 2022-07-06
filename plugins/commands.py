@@ -1,7 +1,7 @@
 import os
 import random
 import asyncio
-from Script import script
+from scripts import Scripted
 from pyrogram import Client as Sree, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import re
