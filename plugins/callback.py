@@ -10,26 +10,24 @@ async def callback_data(bot, message: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+        InlineKeyboardButton('Dev', url='https://t.me/PromotionMediator'),
+        InlineKeyboardButton('Source', url ='https://t.me/PromotionMediator')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
-    ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
+        InlineKeyboardButton('Help', callback_data="help")
     ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            "Hai",
+            "(づ｡◕‿‿◕｡)づ\n\n ι αм тєѕт вσт \n\n¢яєαтє∂ ву🤝 @UrvashiTheaters ٩(˘◡˘)۶",
             reply_markup=reply_markup
         )
 
 
     elif query_data == "help":
         buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
+        InlineKeyboardButton('Home', callback_data='start'),
+        InlineKeyboardButton('Owner', callback_data='about')
     ],[
         InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
@@ -37,7 +35,7 @@ async def callback_data(bot, message: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            "hai",
+            "<b>Hey Brooh!\nNo Help Available Here 😒</b>",
             reply_markup=reply_markup
         )
 
