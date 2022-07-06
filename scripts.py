@@ -1,4 +1,4 @@
-class Scripted(object):
+class Scripted:
 
     START_TXT = """<b>Hᴇʟʟᴏ {}</b>"""
    
