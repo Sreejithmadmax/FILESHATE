@@ -6,9 +6,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 @Sree.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, message: CallbackQuery):
 
-    query_data = update.data
+    message_data = update.data
 
-    if query_data == "start":
+    if message_data == "start":
         buttons = [[
         InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
         InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
@@ -26,7 +26,7 @@ async def callback_data(bot, message: CallbackQuery):
         )
 
 
-    elif query_data == "help":
+    elif message_data == "help":
         buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
         InlineKeyboardButton('About 🚩', callback_data='about')
@@ -42,7 +42,7 @@ async def callback_data(bot, message: CallbackQuery):
         )
 
 
-    elif query_data == "about": 
+    elif message_data == "about": 
         buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
@@ -56,8 +56,8 @@ async def callback_data(bot, message: CallbackQuery):
         )
 
 
-    elif query_data == "help_me":
+    elif message_data == "help_me":
         await update.answer("Do", show_alert=True)
 
-    elif query_data == "close":
+    elif message_data == "close":
         await update.message.delete()   
