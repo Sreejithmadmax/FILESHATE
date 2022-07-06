@@ -55,7 +55,7 @@ async def callback_data(bot, message: CallbackQuery):
     elif query_data == "close":
         await message.message.delete()   
     elif query.data == 'source':
-        await query.answer(f"{query.from_user.first_name} ബ്രോ കൊടുക്കുമ്പോ അറിയിക്കാം 😂", True)
+        await message.answer(f"{query.from_user.first_name} ബ്രോ കൊടുക്കുമ്പോ അറിയിക്കാം 😂", True)
     elif query.data == 'kids':
-        await query.answer(f"Hey {query.from_user.first_name} നീ കുട്ടിയാണോ... കിളവനല്ലേ 😂", True)
+        await message.answer(f"Hey {query.from_user.first_name} നീ കുട്ടിയാണോ... കിളവനല്ലേ 😂", True)
     
