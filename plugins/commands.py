@@ -18,7 +18,7 @@ async def start(bot, message):
     ],[
         InlineKeyboardButton('Help', callback_data="help")
     ]]
-    reply_markup = InlineKeyboardMarkup(button)
+    reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
          photo="https://telegra.ph/file/452d89674fecc5f6ac878.jpg",
          caption = "(づ｡◕‿‿◕｡)づ\n\n ι αм тєѕт вσт \n\n¢яєαтє∂ ву🤝 @UrvashiTheaters ٩(˘◡˘)۶",
