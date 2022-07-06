@@ -1,3 +1,4 @@
+from imdb import IMDb
 from typing import Union
 import re
 import os
