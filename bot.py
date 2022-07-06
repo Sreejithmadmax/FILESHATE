@@ -17,7 +17,7 @@ OWNER_TXT = """<b>ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ
    
 ꜰᴜʟʟ ɴᴀᴍᴇ : ᴘᴏᴡᴇʀ ᴏꜰ ᴛɢ
 ᴜꜱᴇʀɴᴀᴍᴇ : @PowerOfTg
-ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/poweroftg>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>📢 ᴜʀᴠᴀꜱʜɪ ᴛʜᴇᴀᴛᴇʀꜱ 📢</b>"""
+ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/poweroftg>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>ᴜʀᴠᴀꜱʜɪ ᴛʜᴇᴀᴛᴇʀꜱ</b>"""
    
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
