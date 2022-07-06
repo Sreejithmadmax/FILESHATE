@@ -1,5 +1,6 @@
 class Scripted(object):
-    START_MSG = """<b>Hᴇʟʟᴏ {}</b>"""
+
+    START_TXT = """<b>Hᴇʟʟᴏ {}</b>"""
    
     OWNER_TXT = """<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
     
