@@ -20,7 +20,7 @@ async def start(bot, message):
     reply_markup = InlineKeyboardMarkup(button)
     await message.reply_photo(
          photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
-         caption = START_TXT.format(message.from_user.mention),
+         caption = "hai"(message.from_user.mention),
          reply_markup = reply_markup            
      )         
     
