@@ -25,3 +25,29 @@ async def start(bot, message):
      )         
     
 
+@Sree.on_message(filters.command("help") & filters.private & filters.incoming)
+async def help(bot, message):
+    button = [[
+        InlineKeyboardButton(f'🏡 𝙷𝙾𝙼𝙴', callback_data='back'),
+        InlineKeyboardButton(f'𝚁𝙴𝙵𝚁𝙴𝚂𝙷 ✅️', callback_data='donate')
+        ],[
+        InlineKeyboardButton(f'🚫 𝙲𝙻𝙾𝚂𝙴 🚫', callback_data='close')
+    ]]
+    reply_markup = InlineKeyboardMarkup(button)
+        await bot.message.edit(
+            text="No Help"         
+        )
+
+@Sree.on_message(filters.command("about") & filters.private & filters.incoming)
+async def about(bot, message):
+    button = [[
+        InlineKeyboardButton(f'🏡 𝙷𝙾𝙼𝙴', callback_data='back'),
+        InlineKeyboardButton(f'𝚁𝙴𝙵𝚁𝙴𝚂𝙷 ✅️', callback_data='donate')
+        ],[
+        InlineKeyboardButton(f'🚫 𝙲𝙻𝙾𝚂𝙴 🚫', callback_data='close')
+    ]]
+    reply_markup = InlineKeyboardMarkup(button)
+        await bot.message.edit(
+            text="No about",
+        )
+  
