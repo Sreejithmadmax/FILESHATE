@@ -21,7 +21,7 @@ async def callback_data(bot, message: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            text="Hai",
+            "Hai",
             reply_markup=reply_markup
         )
 
@@ -37,7 +37,7 @@ async def callback_data(bot, message: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            text="hai",
+            "hai",
             reply_markup=reply_markup
         )
 
@@ -51,7 +51,7 @@ async def callback_data(bot, message: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            text="hai",
+            "hai",
             reply_markup=reply_markup
         )
 
