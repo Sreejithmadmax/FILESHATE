@@ -1,11 +1,10 @@
 import os
 from pyrogram import Client as Sree, filters
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
-from info import IMDB_TEMPLATE
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from utils import get_poster
 
-
+IMDB_TEMPLATE = "〓〓〓 <b><a href={url}>{title}</a></b> 〓〓〓\n\n<b>⭐️ ɪᴍᴅʙ {rating} | ⏰ ʀᴜɴ {runtime} ᴍɪɴ\n📆 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ : <a href={url}/releaseinfo>{release_date}</a></b>\n\n● <code>{genres}</code>\n\n● <code>{languages}</code>\n\n📖 sᴛᴏʀʏ : <code>{plot}</code>"
 
 @Sree.on_message(filters.command(["imdb", 'search']))
 async def imdb_search(bot, message):
