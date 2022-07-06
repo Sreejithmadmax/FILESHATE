@@ -23,7 +23,18 @@ async def start(bot, message):
         InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
     ]]
     reply_markup = InlineKeyboardMarkup(button)
-        await message.reply(START_MSG.format(message.from_user.mention))
+    await message.reply_photo(
+         photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
+         caption = START_MSG.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
+            ),
+            reply_markup = reply_markup,           
+            quote = True
+        )
 
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
