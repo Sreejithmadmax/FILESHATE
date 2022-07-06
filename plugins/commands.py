@@ -10,7 +10,7 @@ import re
 
 
 
-@sree.on_message(filters.command('start') & filters.private)
+@Sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     button = [[
         InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/PromotionMediator')    
