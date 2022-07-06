@@ -7,11 +7,12 @@ from utils import get_poster
 
 
 
-@Sree.on_message(filters.command(["imdb", 'search']))
+@Sree.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def imdb_search(bot, message):
     if ' ' in message.text:
+        movie_name=update.message.text
         k = await message.reply('Searching ImDB')
-        r, title = message.text.split(None, 1)
+        r, title = movie_name.split(None, 1)
         movies = await get_poster(title, bulk=True)
         if not movies:
             return await message.reply("No results Found")
