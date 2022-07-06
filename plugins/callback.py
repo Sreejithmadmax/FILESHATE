@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 
-@RenamerNs.on_callback_query(filters.regex('^help$'))
+@Sree.on_callback_query(filters.regex('^help$'))
 async def help_cb(c, m):
     await m.answer()
     await help(c, m, True)
