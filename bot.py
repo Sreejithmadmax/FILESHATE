@@ -13,17 +13,26 @@ sree = Client(
 
 START_MSG = "<b>Hai {} Bro No Help😂</b>"
 
-
-movie1_down_1 = [[                                                 
-                  InlineKeyboardButton("Season 1", callback_data="start")
-                  ],[
-                  InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
-                  ]]
    
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    await message.reply(START_MSG.format(message.from_user.mention))
-    reply_markup = InlineKeyboardMarkup(movie1_down_2)
+    await message.reply(START_MSG.format(message.from_user.mention)),
+    reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("Search Here", url='https://t.me/slmovieshubsl'),
+                        InlineKeyboardButton("Source Code", url='https://github.com/kalanakt/imdb-autofilter-bot'),
+                    ],
+                   [
+                       InlineKeyboardButton("Series Channel", url='https://t.me/timelytvshow'),
+                       InlineKeyboardButton("Support Group", url='https://t.me/slmovieshubsl'),
+                    ],
+                     [
+                        InlineKeyboardButton("About", callback_data="about")
+                    ]
+                ]
+            )
+        )
 
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
