@@ -3,7 +3,7 @@ from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
+@Sree.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, message: CallbackQuery):
 
     query_data = update.data
