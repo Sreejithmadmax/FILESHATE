@@ -13,8 +13,8 @@ sree = Client(
 
 HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-START_TXT = """<b>Hᴇʟʟᴏ {}</b>
-OWNER_TXT = """<b>@PowerOfTg</b>
+START_TXT = """<b>Hᴇʟʟᴏ {}</b>"""
+OWNER_TXT = """<b>@PowerOfTg</b>"""
 
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
