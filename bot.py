@@ -11,13 +11,19 @@ sree = Client(
     api_hash = os.environ["API_HASH"],
 )
 
+START_MSG = "<b>Hai {},\nI'm a simple bot to delete group messages after a specific time</b>"
+
+
 movie1_down_1 = [[                                                 
                   InlineKeyboardButton("Season 1", callback_data="start")
                   ],[
                   InlineKeyboardButton("🄲🄻🄾🅂🄴", callback_data="close")
                   ]]
-    
-    
+   
+@sree.on_message(filters.command('start') & filters.private)
+async def start(bot, message):
+    await message.reply(START_MSG.format(message.from_user.mention))
+   
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
     if msg.data == "close":
