@@ -34,7 +34,7 @@ async def help(bot, message):
         InlineKeyboardButton(f'🚫 𝙲𝙻𝙾𝚂𝙴 🚫', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(button)
-        await bot.message.edit(
+        await msg.message.edit(
             text="No Help"         
         )
 
@@ -47,7 +47,7 @@ async def about(bot, message):
         InlineKeyboardButton(f'🚫 𝙲𝙻𝙾𝚂𝙴 🚫', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(button)
-        await bot.message.edit(
+        await msg.message.edit(
             text="No about",
         )
   
