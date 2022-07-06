@@ -25,11 +25,10 @@ async def start(bot, message):
     reply_markup = InlineKeyboardMarkup(button)
     await message.reply_photo(
          photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
-         caption ="hai",(        
-            ),
-            reply_markup = reply_markup         
-        )
-
+         caption = START_MSG.format,   
+         reply_markup = reply_markup            
+     )             
+           
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
     if msg.data == "close":
