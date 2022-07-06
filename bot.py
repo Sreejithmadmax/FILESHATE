@@ -1,5 +1,7 @@
 import re, asyncio, random
 import os
+from pyrogram import Client
+
 
 sree = Client(
     "URUVASHI_FILTER",
