@@ -6,9 +6,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 @Sree.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, message: CallbackQuery):
 
-    message_data = update.data
+    query_data = message.data
 
-    if message_data == "start":
+    if query_data == "start":
         buttons = [[
         InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
         InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
@@ -20,13 +20,13 @@ async def callback_data(bot, message: CallbackQuery):
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_caption(
+        await message.message.edit_caption(
             text="Hai",
             reply_markup=reply_markup
         )
 
 
-    elif message_data == "help":
+    elif query_data == "help":
         buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
         InlineKeyboardButton('About 🚩', callback_data='about')
@@ -36,13 +36,13 @@ async def callback_data(bot, message: CallbackQuery):
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_caption(
+        await message.message.edit_caption(
             text="hai",
             reply_markup=reply_markup
         )
 
 
-    elif message_data == "about": 
+    elif query_data == "about": 
         buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
@@ -50,14 +50,14 @@ async def callback_data(bot, message: CallbackQuery):
         
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_caption(
+        await message.message.edit_caption(
             text="hai",
             reply_markup=reply_markup
         )
 
 
-    elif message_data == "help_me":
+    elif query_data == "help_me":
         await update.answer("Do", show_alert=True)
 
-    elif message_data == "close":
+    elif query_data == "close":
         await update.message.delete()   
