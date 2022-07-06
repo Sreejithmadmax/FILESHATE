@@ -1,4 +1,4 @@
-class script(object):
+class Scripted(object):
     START_MSG = """<b>Hᴇʟʟᴏ {}</b>"""
    
     OWNER_TXT = """<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
