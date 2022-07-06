@@ -11,4 +11,9 @@ Sree = Client(
               plugins={"root": "plugins"},
               )                   
 
+async def stop(self, *args):
+        await super().stop()
+        logging.info("Bot stopped. Bye.")
+
+
 Sree.run() 
