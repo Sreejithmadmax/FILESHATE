@@ -111,7 +111,7 @@ async def my_handle56814(bot, message):
         photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
         caption=""" 𝙼𝙾𝚅𝙸𝙴 : Money Heist
  𝚈𝙴𝙰𝚁 : 2009
- 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720p 1080p 480p
+ 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 
  𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸""",
         reply_markup=InlineKeyboardMarkup(movie1_down_2)
     )
