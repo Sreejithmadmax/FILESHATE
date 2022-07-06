@@ -16,23 +16,14 @@ START_MSG = "<b>Hai {} Bro No Help😂</b>"
    
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    await message.reply(START_MSG.format(message.from_user.mention)),
-    reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Search Here", url='https://t.me/slmovieshubsl'),
-                        InlineKeyboardButton("Source Code", url='https://github.com/kalanakt/imdb-autofilter-bot'),
-                    ],
-                   [
-                       InlineKeyboardButton("Series Channel", url='https://t.me/timelytvshow'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/slmovieshubsl'),
-                    ],
-                     [
-                        InlineKeyboardButton("About", callback_data="about")
-                    ]
-                ]
-            )
-        )
+    button = [[
+        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/{owner_username}'),
+        InlineKeyboardButton(f'𝙰𝙱𝙾𝚄𝚃 🔎', callback_data='about')
+        ],[
+        InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
+    ]]
+    reply_markup = InlineKeyboardMarkup(button)
+        await message.reply(START_MSG.format(message.from_user.mention))
 
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
