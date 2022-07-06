@@ -1,5 +1,3 @@
-from imdb import IMDb
-from info import LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
 from typing import Union
 import re
 import os
@@ -8,6 +6,8 @@ from pyrogram.types import InlineKeyboardButton
 from bs4 import BeautifulSoup
 import requests
 
+LONG_IMDB_DESCRIPTION = "True"
+MAX_LIST_ELM = "4"
 
 imdb = IMDb()
 
