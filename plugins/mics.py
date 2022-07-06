@@ -8,7 +8,7 @@ from utils import get_poster
 
 
 @Sree.on_message(filters.command(["imdb", 'search']))
-async def imdb_search(client, message):
+async def imdb_search(bot, message):
     if ' ' in message.text:
         k = await message.reply('Searching ImDB')
         r, title = message.text.split(None, 1)
@@ -29,7 +29,7 @@ async def imdb_search(client, message):
         await message.reply('Give me a movie / series Name')
 
 @Sree.on_callback_query(filters.regex('^imdb'))
-async def imdb_callback(bot: Client, quer_y: CallbackQuery):
+async def imdb_callback(bot: Sree, quer_y: CallbackQuery):
     i, movie = quer_y.data.split('#')
     imdb = await get_poster(query=movie, id=True)
     btn = [
