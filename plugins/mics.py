@@ -31,27 +31,7 @@ async def imdb_search(bot, message):
 @Sree.on_callback_query(filters.regex('^imdb'))
 async def imdb_callback(bot: Sree, quer_y: CallbackQuery):
     i, movie = quer_y.data.split('#')
-    imdb = await get_poster(query=movie, id=True)
-    btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"⚡️{imdb.get('title')} - {imdb.get('year')}⚡️",
-                    url=imdb['url'],
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text=f"🕊️Must Click🕊️",
-                    callback_data="close_pages"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                    text=f"📮ഉർവശി തീയറ്റേർസ്📮",
-                    url="https://t.me/UrvashiTheaters"
-                )
-            ],
-        ]
+    imdb = await get_poster(query=movie, id=True)    
     message = quer_y.message.reply_to_message or quer_y.message
     if imdb:
         caption = IMDB_TEMPLATE.format(
