@@ -14,7 +14,7 @@ import re
 async def start(bot, message):
     buttons = [[
         InlineKeyboardButton('Dev', url='https://t.me/PromotionMediator'),
-        InlineKeyboardButton('Source', url ='https://t.me/PromotionMediator')
+        InlineKeyboardButton('Source', callback_data ="help_me")
     ],[
         InlineKeyboardButton('Help', callback_data="help")
     ]]
