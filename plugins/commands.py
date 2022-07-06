@@ -12,14 +12,15 @@ import re
 
 @Sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
-    button = [[
-        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅 🤴', url=f'https://t.me/PromotionMediator')    
-        ],[
-        InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
+    buttons = [[
+        InlineKeyboardButton('Dev', url='https://t.me/PromotionMediator'),
+        InlineKeyboardButton('Source', url ='https://t.me/PromotionMediator')
+    ],[
+        InlineKeyboardButton('Help', callback_data="help")
     ]]
     reply_markup = InlineKeyboardMarkup(button)
     await message.reply_photo(
-         photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
+         photo="https://telegra.ph/file/452d89674fecc5f6ac878.jpg",
          caption = "(づ｡◕‿‿◕｡)づ\n\n ι αм тєѕт вσт \n\n¢яєαтє∂ ву🤝 @UrvashiTheaters ٩(˘◡˘)۶",
          reply_markup = reply_markup            
      )          
