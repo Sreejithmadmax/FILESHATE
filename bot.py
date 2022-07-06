@@ -10,25 +10,61 @@ sree = Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
 )
-
-START_MSG = "<b>Hai {} Bro No Help😂</b>"
-
+HELP_TXT = """𝙷𝙴𝚈 {}
+𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
+START_TXT = """<b>Hᴇʟʟᴏ {}</b>
+OWNER_TXT = """<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
+    
+• ꜰᴜʟʟ ɴᴀᴍᴇ : ᴘᴏᴡᴇʀ ᴏꜰ ᴛɢ
+• ᴜꜱᴇʀɴᴀᴍᴇ : @PowerOfTg
+• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/poweroftg>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+⍟───[ 📢 ᴜʀᴠᴀꜱʜɪ ᴛʜᴇᴀᴛᴇʀꜱ 📢 ]───⍟</b>
+"""
    
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     button = [[
-        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/PromotionMediator'),
-        InlineKeyboardButton(f'𝙰𝙱𝙾𝚄𝚃 🔎', callback_data='about')
+        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/PromotionMediator')    
         ],[
         InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
     ]]
     reply_markup = InlineKeyboardMarkup(button)
     await message.reply_photo(
          photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
-         caption = START_MSG.format(message.from_user.mention),  
+         caption = START_TXT.format(message.from_user.mention),  
          reply_markup = reply_markup            
-     )             
-           
+     )         
+    elif query.data == "start":
+        button = [[
+        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/PromotionMediator')
+        ],[
+        InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
+    ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text= START_TXT.format(message.from_user.mention),
+            reply_markup=reply_markup
+        )
+    elif query.data == "help":
+        buttons = [[
+            InlineKeyboardButton('About', callback_data='about')
+            ],[
+            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close_pages')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await msg.message.edit_text(
+            text= HELP_TXT.format(message.from_user.mention),
+            reply_markup=reply_markup 
+        )
+    elif query.data == "about":
+        buttons= [[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await msg.message.edit_text(
+            text= OWNER_TXT,
+            reply_markup=reply_markup  
+        )       
 @sree.on_callback_query()
 async def callback(bot, msg: CallbackQuery): 
     if msg.data == "close":
