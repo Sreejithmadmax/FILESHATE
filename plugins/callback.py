@@ -1,8 +1,9 @@
 from pyrogram import Client as Sree, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkupasspass
 
-    elif msg.data == "pages":
-        await msg.answer()
+
+
+
     elif msg.data == "jeeva":
         buttons = [[
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
