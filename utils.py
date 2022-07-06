@@ -1,4 +1,5 @@
 from imdb import IMDb
+from info import LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
 from typing import Union
 import re
 import os
