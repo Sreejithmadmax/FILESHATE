@@ -11,7 +11,7 @@ async def callback_data(bot, message: CallbackQuery):
     if query_data == "start":
         buttons = [[
         InlineKeyboardButton('Dev', url='https://t.me/PromotionMediator'),
-        InlineKeyboardButton('Source', callback_data ="help_me")
+        InlineKeyboardButton('Source', callback_data ="source")
     ],[
         InlineKeyboardButton('Help', callback_data="help")
     ]]
@@ -43,7 +43,7 @@ async def callback_data(bot, message: CallbackQuery):
     elif query_data == "about": 
         buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlineKeyboardButton('Kids', callback_data='kids')
     ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -52,10 +52,10 @@ async def callback_data(bot, message: CallbackQuery):
             "<b>Contact Directly To Dev For More Info😂</b>",
             reply_markup=reply_markup
         )
-
-
-    elif query_data == "help_me":
-        await message.answer("Do", show_alert=True)
-
     elif query_data == "close":
         await message.message.delete()   
+    elif query.data == 'source':
+        await query.answer(f"{query.from_user.first_name} ബ്രോ കൊടുക്കുമ്പോ അറിയിക്കാം 😂", True)
+    elif query.data == 'kids':
+        await query.answer(f"Hey {query.from_user.first_name} നീ കുട്ടിയാണോ... കിളവനല്ലേ 😂", True)
+    
