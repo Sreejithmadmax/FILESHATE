@@ -17,7 +17,7 @@ START_MSG = "<b>Hai {} Bro No Help😂</b>"
 @sree.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     button = [[
-        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/{owner_username}'),
+        InlineKeyboardButton(f'🤴 𝙳𝙴𝚅', url=f'https://t.me/PromotionMediator'),
         InlineKeyboardButton(f'𝙰𝙱𝙾𝚄𝚃 🔎', callback_data='about')
         ],[
         InlineKeyboardButton(f'♻️ 𝙷𝙴𝙻𝙿 ♻️', callback_data="help")
