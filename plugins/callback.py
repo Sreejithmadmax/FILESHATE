@@ -11,7 +11,7 @@ async def callback_data(bot, message: CallbackQuery):
     if query_data == "start":
         buttons = [[
         InlineKeyboardButton('Dev', url='https://t.me/PromotionMediator'),
-        InlineKeyboardButton('Source', url ='https://t.me/PromotionMediator')
+        InlineKeyboardButton('Source', callback_data ="help_me")
     ],[
         InlineKeyboardButton('Help', callback_data="help")
     ]]
@@ -49,13 +49,13 @@ async def callback_data(bot, message: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await message.message.edit_caption(
-            "hai",
+            "<b>Contact Directly To Dev For More Info😂</b>",
             reply_markup=reply_markup
         )
 
 
     elif query_data == "help_me":
-        await update.answer("Do", show_alert=True)
+        await message.answer("Do", show_alert=True)
 
     elif query_data == "close":
-        await update.message.delete()   
+        await message.message.delete()   
