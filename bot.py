@@ -96,30 +96,6 @@ async def callback(bot, msg: CallbackQuery):
             text=" 𝙼𝙾𝚅𝙸𝙴 : Money Heist\n 𝚈𝙴𝙰𝚁 : 2009\n𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 720 1080p 480p\n 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸",
             reply_markup=reply_markup
         )
-@sree.on_message(filters.command('start') & filters.private)
-def start(bot, message):
-   text ="കുട്ടാപ്സ് ",
-   reply_markup = InlineKeyboardMarkup(movie1_down_1)
-   message.replay(
-        text="പോടാ മോനെ ദിനേശാ ",
-        reply_markup=reply_markup
-)
                                 
-@sree.on_message(filters.regex("Money Heist") & filters.group)
-async def my_handle56814(bot, message):
-    await message.reply_photo( 
-        photo="https://telegra.ph/file/e442a24f233fac96ce83f.jpg",
-        caption=""" 𝙼𝙾𝚅𝙸𝙴 : Money Heist
- 𝚈𝙴𝙰𝚁 : 2009
- 𝚀𝚄𝙰𝙻𝙸𝚃𝚈 : 
- 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴 : 𝚃𝙰𝙼𝙸""",
-        reply_markup=InlineKeyboardMarkup(movie1_down_2)
-    )
-
-movie1_down_2 = [[                                                 
-                  InlineKeyboardButton("Seasons", callback_data="start"),
-                  InlineKeyboardButton("close", callback_data="close")
-                  ]]       
-
 
 sree.run() 
