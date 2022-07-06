@@ -7,7 +7,7 @@ from utils import get_poster
 
 
 
-@Sree.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
+@Sree.on_message(filters.command(["imdb", 'search']))
 async def imdb_search(bot, message):
     if ' ' in message.text:
         movie_name=update.message.text
